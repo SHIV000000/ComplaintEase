@@ -1,0 +1,46 @@
+<!-- complaints/templates/complaints/dashboard.html -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    {% if data %}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Station</th>
+                    <th>Complaint</th>
+                    <th>Status</th>
+                    <th>Token</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for complaint in data %}
+                    <tr>
+                        <td>{{ complaint.id }}</td>
+                        <td>{{ complaint.name }}</td>
+                        <td>{{ complaint.email }}</td>
+                        <td>{{ complaint.phone }}</td>
+                        <td>{{ complaint.station }}</td>
+                        <td>{{ complaint.complain }}</td>
+                        <td>{{ complaint.status }}</td>
+                        <td>{{ complaint.token }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No data available.</p>
+    {% endif %}
+</body>
+</html>

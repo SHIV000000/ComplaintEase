@@ -1,0 +1,28 @@
+<!-- complaints/templates/complaints/header.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'complaints/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>ComplaintEase</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'file_complaint' %}" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" >File a Complaint</a></li>
+                <li><a href="{% url 'check_status' %}" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" >Check Status</a></li>
+                <li><a href="{% url 'admin_dashboard' %}" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" >Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

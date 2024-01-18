@@ -1,0 +1,102 @@
+/* static/complaints/styles.css */
+/* Consistent Styling */
+body {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+  }
+  
+  /* Whitespace and Padding */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* CSS Framework (Example: Bootstrap) */
+  /* Uncomment the following lines if using Bootstrap */
+  /*
+  @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+  */
+  
+  /* Typography */
+  h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+  }
+  
+  p {
+    margin-bottom: 15px;
+  }
+  
+  /* Buttons and Links */
+  button, .btn, a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    color: #007BFF;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover, .btn:hover, a:hover {
+    background-color: #007BFF;
+    color: #fff;
+  }
+  
+  /* Forms */
+  form {
+    margin-bottom: 20px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Images and Icons */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .icon {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  /* Animations */
+  /* Add your animation styles here */
+  
+  /* Cross-browser Compatibility */
+  /* Add specific styles for different browsers if needed */
+  
+  /* CSS Preprocessors (Example: Sass) */
+  /* Import your Sass files here */
+  
+  /* Comments */
+  /* Add comments to explain complex styles or group related styles */
+  
+  /* Modularization */
+  /* Organize your CSS into modular components */
+  
+  /* Accessibility */
+  /* Ensure proper contrast and readable text */
+  

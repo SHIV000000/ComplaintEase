@@ -1,0 +1,43 @@
+<!-- complaints/templates/complaints/complaint.html -->
+{% extends 'complaints/header.html' %}
+
+{% block title %}File a Complaint{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>File a Complaint</title>
+    <link rel="stylesheet" href="{% static 'complaints/styles.css' %}">
+</head>
+<body>
+    <h1>File a Complaint</h1>
+    <form method="post" action="{% url 'complaint_submission' %}">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" required><br>
+
+        <label for="aadhar">Aadhar:</label>
+        <input type="text" name="aadhar" required><br>
+
+        <label for="station">Station:</label>
+        <input type="text" name="station" required><br>
+
+        <label for="Complaint">Complaint:</label>
+        <textarea name="Complaint" required></textarea><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+{% endblock %}
