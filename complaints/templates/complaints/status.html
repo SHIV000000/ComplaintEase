@@ -1,26 +1,71 @@
 <!-- complaints/templates/complaints/status.html -->
 
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Check Status</title>
-</head>
-<body>
-    <h1>Check Status</h1>
+  </head>
+  <body>
+    <!-- <h1>Check Status</h1>
     <form method="post" action="{% url 'check_status' %}">
-        {% csrf_token %}
-        <label for="token">Enter Token Number:</label>
-        <input type="text" name="token" required><br>
+      {% csrf_token %}
+      <label for="token">Enter Token Number:</label>
+      <input type="text" name="token" required /><br />
 
-        <button type="submit">Check Status</button>
-    </form>
+      <button type="submit">Check Status</button>
+    </form> -->
+
+    <section class="text-gray-600 body-font">
+      {% csrf_token %}
+
+      <div class="container px-5 py-10 lg:py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-12">
+          <h1
+            class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"
+          >
+            Check your complaint Status
+          </h1>
+          <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+            Enter the token id of complaint to check status. You'll get an email
+            verification when an officer reviews your complaint.
+          </p>
+        </div>
+        <form
+          action="/status"
+          method="post"
+          class="w-full flex flex-col item-center"
+        >
+          <label
+            for="full-name"
+            class="flex px-0 lg:w-2/3 w-full sm:flex-row flex-col mx-auto lg:px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0"
+            >Enter Token no.</label
+          >
+          <div
+            class="flex px-0 lg:w-2/3 w-full sm:flex-row flex-col mx-auto lg:px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0"
+          >
+            <div class="relative flex-grow w-full">
+              <input
+                required
+                type="text"
+                id="token"
+                name="token"
+                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              />
+            </div>
+            <button
+              class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            >
+              Check
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
 
     {% if status %}
-        <p>Status: {{ status }}</p>
+    <p>Status: {{ status }}</p>
     {% endif %}
-</body>
+  </body>
 </html>
- 
