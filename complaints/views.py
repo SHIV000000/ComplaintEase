@@ -31,7 +31,7 @@ def complaint_submission(request):
         if not aadhar.isdigit():
             return HttpResponse("Invalid Aadhar. Please enter a valid numeric Aadhar.")
 
-        station = request.POST['station']
+        
         complaint_text = request.POST['Complaint']
 
         # Generating a random unique token number
@@ -46,7 +46,7 @@ def complaint_submission(request):
             email=email,
             phone=phone,
             aadhar=aadhar,
-            station=station,
+            
             complaint=complaint_text,
             status=0,
             token=token
