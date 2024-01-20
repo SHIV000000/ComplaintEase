@@ -14,7 +14,7 @@ ComplaintEase is a web application that allows users to file complaints, track t
  **Clone the repository:**
 
 ```bash
- git clone https://github.com/your-username/ComplaintEase.git
+ git clone https://github.com/SHIV000000/ComplaintEase.git
 ```
 ```bash
 cd ComplaintEase
