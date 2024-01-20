@@ -20,7 +20,7 @@ ComplaintEase is a web application that allows users to file complaints, track t
 cd ComplaintEase
  ```
 **Create a Virtual Environment**
-
+On macOS/Linux:
    ```bash
 
    python3 -m venv venv
