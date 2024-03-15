@@ -30,7 +30,7 @@ python3 -m venv venv
 #### For Windows:
 
 ```bash
-  python -m venv venv
+python -m venv venv
 ```
 
 ### Activate the Virtual Environment:
