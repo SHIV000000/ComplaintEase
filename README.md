@@ -19,17 +19,19 @@ ComplaintEase is a web application that allows users to file complaints, track t
 ```bash
 cd ComplaintEase
  ```
-**Create a Virtual Environment**
+### Create a Virtual Environment
 
-On macOS/Linux:
-   ```bash
+#### For macOS/Linux:
 
-   python3 -m venv venv
-   ```
- On Windows:
-   ```bash
-   python -m venv venv
-   ```
+```bash
+python3 -m venv venv
+```
+
+#### For Windows:
+
+```bash
+  python -m venv venv
+```
 
 ### Activate the Virtual Environment:
 
@@ -38,8 +40,6 @@ On macOS/Linux:
 ```bash
 source venv/bin/activate
  ```
-
-### Activate the Virtual Environment:
 
 #### For Windows:
 
